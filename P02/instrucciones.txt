@@ -1,0 +1,10 @@
+ADD R0, R0, R1
+LI 1, R2
+LI 2, R3
+bucle: JAL subr
+SUB R3, R2, R3
+JNZ bucle
+J fin
+subr: ADD R1, R2, R1
+RET
+fin: J fin
